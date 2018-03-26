@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Apache-Axis</display-name>
+
+    <context-param>
+        <param-name>tempfile.dir</param-name>
+        <param-value>tmpfiles</param-value>
+    </context-param>
+
+
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>itsmejamshaid@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>91799674</param-value>
+    </context-param>
+    <context-param>
+        <param-name>res</param-name>
+        <param-value>jamshaidsohail@outlook.com</param-value>
+    </context-param>
+
+
+
+
+
+
+
+
+
+
+    <servlet>
+        <display-name>Apache-Axis Servlet</display-name>
+        <servlet-name>AxisServlet</servlet-name>
+        <servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <display-name>Axis Admin Servlet</display-name>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>org.apache.axis.transport.http.AdminServlet</servlet-class>
+        <load-on-startup>100</load-on-startup>
+    </servlet>
+    <servlet>
+        <display-name>SOAPMonitorService</display-name>
+        <servlet-name>SOAPMonitorService</servlet-name>
+        <servlet-class>org.apache.axis.monitor.SOAPMonitorService</servlet-class>
+        <init-param>
+            <param-name>SOAPMonitorPort</param-name>
+            <param-value>5101</param-value>
+        </init-param>
+        <load-on-startup>100</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/servlet/AxisServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>*.jws</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SOAPMonitorService</servlet-name>
+        <url-pattern>/SOAPMonitor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/servlet/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <mime-mapping>
+        <extension>wsdl</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
+
+
+    <!--
+
+
+    <security-role>
+        <role-name>hrpersonal</role-name>
+    </security-role>
+    <security-role>
+        <role-name>hrmanager</role-name>
+    </security-role>
+    <security-role>
+        <role-name>sme</role-name>
+    </security-role>
+    <security-role>
+        <role-name>applicant</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
+
+
+
+    
+
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Access for hrpersonal</web-resource-name>
+            <url-pattern>/hrpersonal/hrpersonalhome.jsp</url-pattern>
+            <url-pattern>/hrpersonal/jobdescription.jsp</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>hrpersonal</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Access files for applicant</web-resource-name>
+            <url-pattern>/Applicant/applicanthome.jsp</url-pattern>
+            <url-pattern>/Applicant/seejobs.jsp</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+
+
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>applicant</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+
+
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Access for sme</web-resource-name>
+            <url-pattern>/SME/smehome.jsp</url-pattern>
+            <url-pattern>/SME/noti1.jsp</url-pattern>
+
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+
+
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>sme</role-name>
+
+        </auth-constraint>
+    </security-constraint>
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Access for hrmanager</web-resource-name>
+            <url-pattern></url-pattern>
+
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+
+
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>hrmanager</role-name>
+
+        </auth-constraint>
+    </security-constraint>
+    -->
+
+
+
+
+
+
+
+</web-app>

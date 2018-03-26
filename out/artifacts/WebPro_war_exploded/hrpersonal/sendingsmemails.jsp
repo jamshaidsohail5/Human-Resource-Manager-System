@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sending Mails</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="startup.css" rel="stylesheet">
+	  
+
+	<style type="text/css">
+    .center-block {
+    width:500px;
+    padding:50px;
+    background-color:#eceadc;
+    color:#ec8007;
+	margin-top:100px;
+	}
+	
+	.center-block > img{
+	    margin:auto;
+		width:400px;
+	    
+	}
+	
+	p{
+	padding:0px;
+	}
+	
+	.floated_img
+	{
+    float: center;
+	display:block;
+	border:solid 1px black;
+	margin-top:70px;
+	
+	}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+			<nav class = "navbar navbar-fixed-top navbar-inverse" style = "background:rgba(0,0,0,1);>
+		<div class = "container">
+			<div class = "navbar-header">
+				<button type = "button" class = "navbar-toggle collapsed" 
+				data-toggle = "collapse" data-target ="navbar#collapse">
+				    <span class = "sr-only">Toggle Navigation</span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					
+				</button>	
+				<a class = "navbar-brand" href ="index.html" style = "color:orange;" >Orange HR</a>
+				
+			</div>
+			
+			<div class = "collapse navbar-collapse" id = "navbar-collapse">
+				<ul class = "nav navbar-nav navbar-right">
+					<li ><a href = "hrpersonalhome.jsp" style = "color:white;">Home</a></li>
+					<li><a href = "" style = "color:white;">LogOut</a></li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+			<h1 style = "padding-top:50px;padding-left:570px;">SME's</h1>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:150px;left:300px;background-color:#ff6666;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "pavel.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:1</li>
+							<li>Name:Jamshaid Sohail</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Web</li>
+							<button id = "but1" class = "btn btn-success" style = "margin-top:20px;" >Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:450px;left:300px;background-color:#cc99ff;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "EmilyFox.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:2</li>
+							
+							<li>Name:EmilyFox</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Android</li>
+							<button id = "but2" class = "btn btn-success" style = "margin-top:20px;"  >Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:750px;left:300px;background-color:#ffaa80;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "Yoav.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:3</li>
+							
+							<li>Name:Brain Rowling</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Web</li>
+							<button id = "but3" class = "btn btn-success" style = "margin-top:20px;"  >Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:1050px;left:300px;background-color:#99ffcc;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "guestrin-dato.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:4</li>
+							
+							<li>Name:Guestrin Dato</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Web</li>
+							<button id = "but4" class = "btn btn-success" style = "margin-top:20px;"  >Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:1350px;left:300px;background-color:#ff99e6;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "jeff-1.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:5</li>
+							
+							<li>Name:Jeff Hardy</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Web</li>
+							<button id = "but5" class = "btn btn-success" style = "margin-top:20px;" >Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:1650px;left:300px;background-color:#c2c2a3;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "levin.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:6</li>
+							
+							<li>Name:Levin</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:IOS</li>
+							<button id = "but6" class = "btn btn-success" style = "margin-top:20px;">Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:1950px;left:300px;background-color:#eb99ff;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "Peng_Roger.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:7</li>
+							
+							<li>Name:Peng Roger</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Machine Learning</li>
+							<button id = "but7" class = "btn btn-success" style = "margin-top:20px;">Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:2250px;left:300px;background-color:#b3ffb3;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "neil.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:8</li>
+							
+							<li>Name:Neil Bohr</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:IOS</li>
+							<button id = "but8" class = "btn btn-success" style = "margin-top:20px;">Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:2550px;left:300px;background-color:#b3d9ff;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "tim.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:9</li>
+							
+							<li>Name:Tim Roughgarden</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Algorithms</li>
+							<button id = "but9" class = "btn btn-success" style = "margin-top:20px;">Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		<div style="width:700px;height:245px;border:1px solid orange;position:absolute;top:2850px;left:300px;background-color:#99ffcc;">
+			<div class = "container">
+				<div class = "row">
+						<div class = "col-sm-3" style = "border-right:1px solid black;">
+							<img src = "Alex.jpg" alt = "pavelface" class = "img-circle" style = "padding:60px;">
+						</div>
+						<div class = "col-sm-3">
+						<ul style ="padding-top:60px; color:white;">
+							<li>SmeId:10</li>
+							
+							<li>Name:Alex Covan</li>
+							<li>CNIC:35201-0288558-9</li>
+							<li>Specialization:Android</li>
+							<button id = "but10" class = "btn btn-success" style = "margin-top:20px;">Send Mail</button>
+						
+						</ul>
+						</div>
+				</div>
+			</div>		
+		</div>
+		
+		
+		
+				
+  
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+			
+			
+			<script>
+				
+				document.getElementById("but1").onclick = function () {
+					alert("Mail Sent Successfully!");
+					this.disabled = true;
+			
+				
+				}
+				document.getElementById("but2").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but3").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but4").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but5").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but6").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+			}
+				document.getElementById("but7").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but8").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but9").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+
+			}
+				document.getElementById("but10").onclick = function () {
+		alert("Mail Sent Successfully!");
+				this.disabled = true;
+						
+			}
+			
+				
+			
+			</script>
+			
+		  </body>
+</html>
